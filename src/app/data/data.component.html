@@ -1,0 +1,131 @@
+<!-- <div class="mt-4">
+  <ngx-datatable class="material" [rows]="rows" [loadingIndicator]="loadingIndicator" [columns]="columns"
+    [columnMode]="'force'" [headerHeight]="50" [footerHeight]="50" [rowHeight]="'auto'" [reorderable]="reorderable">
+  </ngx-datatable>
+</div> -->
+
+<!-- <div class="content-header">
+
+
+
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-auto">
+              <h1 class="m-0 text-dark">Dashboard</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-body">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">Article No</th>
+                    <th scope="col">Article to List</th>
+                    <th scope="col">Building Stocks</th>
+                    <th scope="col">Country</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">In Process</th>
+                    <th scope="col">German Content</th>
+                    <th scope="col">Missing</th>
+                    <th scope="col">Problem</th>
+                    <th scope="col">Short English Description/th>
+                    <th scope="col">Short German Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let d of data">
+                    <th>{{d.art_nr}}</th>
+                    <td>{{d.article_to_list}}</td>
+                    <td>{{d.building_block}}</td>
+                    <td>{{d.country}}</td>
+                    <td>{{d.first_date}}</td>
+                    <td>{{d.in_process}}</td>
+                    <td>{{d.is_german_content}}</td>
+                    <td>{{d.is_missing}}</td>
+                    <td>{{d.problem}}</td>
+                    <td>{{d.short_english_description}}</td>
+                    <td>{{d.short_german_description}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+</div> -->
+
+
+<div class="mt-5">
+  
+  <!-- <div class="mt-4 mb-4">
+    <tag-input [ngModel]="['@item']" [onlyFromAutocomplete]="true">
+      
+      <tag-input-dropdown [showDropdownIfEmpty]="true" [dynamicUpdate]="false" [focusFirstElement]="true"
+        [displayBy]="'value'" [identifyBy]="'id'" [autocompleteItems]="autocompleteItemsAsObjects">
+
+        <ng-template let-item="item" let-index="index">
+          ({{ index }}) {{ item.id }}: {{ item.value }}
+        </ng-template>
+
+      </tag-input-dropdown>
+    </tag-input>
+  </div>
+ -->
+
+  <ngx-datatable class="material" [rows]="rows"  
+    [columnMode]="'force'" 
+    (sort) ="sort($event)"
+    [headerHeight]="50" [footerHeight]="50" [rowHeight]="'auto'"
+    [externalSorting]="true"
+    [loadingIndicator]="loading"
+    [rowHeight]="50">
+
+    <ngx-datatable-column name="Article Number">
+  
+      <ng-template let-row = "row" let-value="value" ngx-datatable-cell-template>
+        {{row.articleNumber}}
+      </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Group">
+      <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+        {{row.group}}
+      </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Description">
+      <ng-template let-row = "row" let-value="value" ngx-datatable-cell-template>
+        {{row.description}}
+      </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Stock qty">
+      <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+        {{row.stockQuantity}}
+      </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Storage location">
+      <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+        {{row.storageLocation}}
+      </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Master Data">
+      <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+        {{row.stammDatenBaustein}}
+      </ng-template>
+    </ngx-datatable-column>
+
+
+    <ngx-datatable-column name="Barcode">
+      <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+        {{row.barcode}}
+      </ng-template>
+    </ngx-datatable-column>
+
+  </ngx-datatable>
+</div>

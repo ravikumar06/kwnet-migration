@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@swimlane/ngx-datatable/release/index.css';
+@import '~@swimlane/ngx-datatable/release/themes/material.css';
+@import '~@swimlane/ngx-datatable/release/assets/icons.css';
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ecf1f5;
+}
+
+datatable-body-row {
+    border-top: 1px solid #f4f4f4;
+}
+
+.ngx-datatable.material .datatable-body .datatable-body-row .datatable-body-cell {
+    font-size: 12px !important;
+}

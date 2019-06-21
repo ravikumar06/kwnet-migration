@@ -28,9 +28,14 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/adminlte/adminlte.min.css",
+              "node_modules/font-awesome/css/font-awesome.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "src/assets/adminlte/adminlte.min.js"
+            ]
           },
           "configurations": {
             "production": {

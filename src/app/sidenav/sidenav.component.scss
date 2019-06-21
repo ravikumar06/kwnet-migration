@@ -1,0 +1,35 @@
+.kw-sidenav {
+    overflow-x: hidden;
+
+    .parent-menu {
+        a {
+            font-size: 14px; 
+        }
+
+        i {
+            font-size: 14px;
+        }
+    }
+
+    .sub-menu {
+        margin-left: 8px;
+        a {
+            font-size: 13px; 
+        }
+
+        i {
+            font-size: 13px;
+        }
+    }
+
+    .sub-menu2 {
+        margin-left: 8px;
+        a {
+            font-size: 12px; 
+        }
+
+        i {
+            font-size: 12px;
+        }
+    }
+}
